@@ -7,6 +7,15 @@ Version: 1.0.0
 */
 
 
+
+/* IMPORTS  */
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Roboto');
+
+
+
+
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -141,4 +150,40 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+
+
+
+/* TEXT */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 0.9em;
+    margin: 0 0 1.8em 0;
+}
+
+h2 {
+    font-size: 0.7em;
+    margin: 0 0 0.8em 0;
+}
+
+h4 {
+    font-size: 0.6em;
+    margin: 0 0 0.6em 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
 }
