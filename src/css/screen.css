@@ -9,8 +9,8 @@ Version: 1.0.0
 
 
 /* IMPORTS  */
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Roboto');
-
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Roboto:100,400');
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 
 
 
@@ -155,13 +155,22 @@ table {
 
 
 
+
+
+
+
+
+
+
 /* TEXT */
 
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    background: #fff url(../images/body_bg.jpg) repeat 0 0;
+    background: #fff url(../assets/images/body_bg.jpg) repeat 0 0;
     color: #fff;
+
 }
 
 
@@ -194,15 +203,67 @@ a:hover {
 
 
 
-.container {
-    width: 300px;
-    background: #324d5c;
-    margin: 90px auto 35px;
-    border-radius: 5px;
+
+
+
+
+
+/* GLOBAL STYLES */
+
+.icon {
+    font-size: 0.8em;
 }
 
+.icon.whatsapp {
+    color: #14BB5E;
+}
+
+.icon.email {
+    color: #3aa5d2;
+}
+
+.icon.linkedin {
+    color: #026096;
+}
+
+
+.container {
+    width: 300px;
+    background: #324d5c url(../assets/images/pattern.png);
+    margin: 90px auto 35px;
+    border-radius: 5px;
+    position: relative;
+}
+
+section {
+    background-image: inherit;
+}
+
+
 .content {
-    padding: 20px;
+    padding: 20px 20px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+header {
+    position: absolute;
+    right: 0;
+    top: -80px;
+}
+
+header .contact-list li {
+    display: inline-block;
+    margin: 0 0 0 0.3em;
 }
 
 
@@ -211,7 +272,52 @@ a:hover {
 
 
 /* INTRO SECTION */
-section.intro {}
+
+.intro .profile-photo a {
+    display: block;
+    margin: -75px auto 36px;
+    background: url(../assets/images/bilal_small.jpg);
+    background-size: cover;
+    width: 103px;
+    height: 97px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+
+.intro .content h1 {
+    margin-bottom: 0.6em;
+}
+
+.intro .content .tagline {
+    font-size: 0.65em;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 0;
+}
+
+.intro .web-developer,
+.intro .web-designer {
+    position: absolute;
+    top: 20px;
+    width: 22%;
+    text-align: center;
+}
+
+
+.intro .web-developer {
+    left: 10px;
+}
+
+.intro .web-designer {
+    right: 10px;
+}
+
+
+
+
+
+
 
 
 
@@ -219,8 +325,17 @@ section.intro {}
 
 /* SKILL SECTION */
 section.skill {
-    background: #e37b40;
+    background-color: #e37b40;
+    /* background-image: inherit; */
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -228,16 +343,31 @@ section.skill {
 
 /* EXPERIENCE SECTION */
 section.experience {
-    background: #de5b49;
+    background-color: #de5b49;
 }
+
+
+
+
+
+
+
+
 
 
 
 
 /* EDUCATION SECTION */
 section.education {
-    background: #46b29d;
+    background-color: #46b29d;
 }
+
+
+
+
+
+
+
 
 
 
@@ -245,8 +375,16 @@ section.education {
 
 /* HOBBY SECTION */
 section.hobby {
-    background: #f0ca4d;
+    background-color: #f0ca4d;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -254,5 +392,5 @@ section.hobby {
 
 /* CONTACT SECTION */
 section.contact {
-    background: #846add;
+    background-color: #846add;
 }
