@@ -188,7 +188,7 @@ h2 {
 
 h4 {
     font-size: 0.6em;
-    margin: 0 0 0.6em 0;
+    margin: 0 0 0.4em 0;
 }
 
 a {
@@ -240,11 +240,41 @@ section {
 }
 
 
+
+main::after,
+section::after {
+    position: relative;
+    bottom: -3px;
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
 .content {
     padding: 20px 20px 30px;
 }
 
+.meter {
+    height: 10px;
+    background-color: #c46d3c;
+    border-radius: 5px;
+    position: relative;
+}
 
+.meter::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 70%;
+    height: inherit;
+    border-radius: inherit;
+    background-color: #99532b;
+    transition: width 0.5s linear;
+
+}
 
 
 
@@ -301,6 +331,7 @@ header .contact-list li {
     position: absolute;
     top: 20px;
     width: 22%;
+    font-weight: 100;
     text-align: center;
 }
 
@@ -329,6 +360,34 @@ section.skill {
     /* background-image: inherit; */
 }
 
+.skill .services h2,
+.skill .technologies h2 {
+    margin-left: 24px;
+}
+
+
+.skill .services-list li,
+.skill .technologies-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 1em;
+}
+
+.skill .services-list .title,
+.skill .technologies-list .title {
+    font-size: 0.5em;
+}
+
+.skill .services-list {
+    margin-bottom: 2em;
+}
+
+.skill .icon {
+    position: absolute;
+    left: 0px;
+    top: 30%;
+}
+
 
 
 
@@ -346,6 +405,66 @@ section.experience {
     background-color: #de5b49;
 }
 
+.experience::after {
+    content: '';
+    clear: both;
+}
+
+.timeline {
+    margin-bottom: 30px;
+}
+
+.timeline>div {
+    clear: both;
+}
+
+
+.timeline h4 {
+    width: 70%;
+    font-size: 0.5em;
+}
+
+.timeline h4::after {
+    content: '........................................';
+    display: block;
+    height: 5px;
+    width: 100%;
+    color: #fff;
+}
+
+.timeline>div:last-child h4::after {
+    content: '............................................................................';
+}
+
+.year,
+.bullets,
+.timeline h4 {
+    float: left;
+}
+
+.timeline .year {
+    font-size: 0.5em;
+    width: 6%;
+    margin-right: 20px;
+}
+
+.timeline .bullets {
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+.timeline .bullet {
+    color: #99532b;
+    margin-bottom: -7px;
+}
+
+.timeline .deg {
+    margin-bottom: -10px;
+}
+
+.timeline>div:last-child .deg {
+    color: yellow;
+}
 
 
 
@@ -362,6 +481,14 @@ section.education {
     background-color: #46b29d;
 }
 
+.education::after {
+    content: '';
+    clear: both;
+}
+
+.education .timeline .bullet {
+    color: #328070;
+}
 
 
 
