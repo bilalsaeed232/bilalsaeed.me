@@ -505,6 +505,25 @@ section.hobby {
     background-color: #f0ca4d;
 }
 
+.hobby .hobbies-list {
+    text-align: center;
+}
+
+.hobby .hobbies-list img {
+    width: 100%;
+
+}
+
+.hobbies-list img * {
+    fill: #fff;
+}
+
+.hobby .hobbies-list h4 {
+    text-transform: uppercase;
+    color: #998237;
+    font-weight: bold;
+}
+
 
 
 
@@ -520,4 +539,14 @@ section.hobby {
 /* CONTACT SECTION */
 section.contact {
     background-color: #846add;
+}
+
+
+
+
+footer {
+    text-align: center;
+    font-size: 0.4em;
+    font-weight: 100;
+    padding: 5px;
 }
