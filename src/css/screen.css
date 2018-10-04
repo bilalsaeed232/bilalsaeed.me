@@ -278,7 +278,8 @@ section::after {
     height: inherit;
     border-radius: inherit;
     background-color: #99532b;
-    transition: width 0.5s linear;
+    transition: width 2.5s ease-in-out;
+    transition-delay: 1s;
 
 }
 
@@ -423,6 +424,75 @@ section.skill {
 .skill .services-list {
     margin-bottom: 2em;
 }
+
+.services-list .meter::before {
+    max-width: 100%;
+}
+
+.services-list .web .meter::before {
+    width: 100%;
+}
+
+.services-list .mobile .meter::before {
+    width: 40%;
+}
+
+.services-list .psd2html .meter::before {
+    width: 90%;
+}
+
+.services-list .cms .meter::before {
+    width: 92%;
+}
+
+.services-list .graphics .meter::before {
+    width: 60%;
+}
+
+.services-list .responsive .meter::before {
+    width: 100%;
+}
+
+.services-list .ecommerce .meter::before {
+    width: 40%;
+}
+
+
+
+
+
+.technologies-list .meter::before {
+    max-width: 100%;
+}
+
+.technologies-list .html .meter::before {
+    width: 100%;
+}
+
+.technologies-list .css .meter::before {
+    width: 100%;
+}
+
+.technologies-list .javascript .meter::before {
+    width: 100%;
+}
+
+.technologies-list .nodejs .meter::before {
+    width: 92%;
+}
+
+.technologies-list .php .meter::before {
+    width: 75%;
+}
+
+.technologies-list .angular .meter::before {
+    width: 100%;
+}
+
+.technologies-list .wordpress .meter::before {
+    width: 90%;
+}
+
 
 .skill .icon {
     position: absolute;
