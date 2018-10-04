@@ -176,13 +176,13 @@ body {
 
 h1 {
     font-family: 'Fredericka the Great', cursive;
-    font-size: 0.9em;
-    margin: 0 0 1.8em 0;
+    font-size: 1.3em;
+    margin: 0 0 1.2em 0;
     text-align: center;
 }
 
 h2 {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin: 0 0 0.8em 0;
 }
 
@@ -226,9 +226,14 @@ a:hover {
     color: #026096;
 }
 
+.icon.call {
+    color: #555;
+}
+
 
 .container {
-    width: 300px;
+    width: 90%;
+    max-width: 520px;
     background: #324d5c url(../assets/images/pattern.png);
     margin: 90px auto 35px;
     border-radius: 5px;
@@ -289,6 +294,12 @@ header {
     position: absolute;
     right: 0;
     top: -80px;
+    width: 100%;
+    ;
+}
+
+header .contact-list {
+    float: right;
 }
 
 header .contact-list li {
@@ -297,30 +308,44 @@ header .contact-list li {
 }
 
 
+header .icon.call {
+    /* position: absolute;
+    left: 0;
+    top: 2px; */
+    display: inline-block;
+    font-size: 0.7em;
+    transform: rotate(90deg);
+}
+
 
 
 
 
 /* INTRO SECTION */
 
+.intro .profile-photo {
+    height: 130px;
+    ;
+}
+
 .intro .profile-photo a {
     display: block;
     margin: -75px auto 36px;
-    background: url(../assets/images/bilal_small.jpg);
-    background-size: cover;
-    width: 103px;
-    height: 97px;
+    background: url(../assets/images/bilal_small2.jpg);
+    background-size: contain;
+    width: 112px;
+    height: 103px;
     border: 3px solid white;
     border-radius: 50%;
 }
 
 
 .intro .content h1 {
-    margin-bottom: 0.6em;
+    margin-bottom: 0.3em;
 }
 
 .intro .content .tagline {
-    font-size: 0.65em;
+    font-size: 0.8em;
     font-weight: 100;
     text-align: center;
     margin-top: 0;
@@ -331,17 +356,17 @@ header .contact-list li {
     position: absolute;
     top: 20px;
     width: 22%;
-    font-weight: 100;
+    /* font-weight: 100; */
     text-align: center;
 }
 
 
 .intro .web-developer {
-    left: 10px;
+    left: 18px;
 }
 
 .intro .web-designer {
-    right: 10px;
+    right: 18px;
 }
 
 
@@ -375,7 +400,7 @@ section.skill {
 
 .skill .services-list .title,
 .skill .technologies-list .title {
-    font-size: 0.5em;
+    font-size: 0.65em;
 }
 
 .skill .services-list {
@@ -421,7 +446,7 @@ section.experience {
 
 .timeline h4 {
     width: 70%;
-    font-size: 0.5em;
+    font-size: 0.65em;
 }
 
 .timeline h4::after {
@@ -443,7 +468,7 @@ section.experience {
 }
 
 .timeline .year {
-    font-size: 0.5em;
+    font-size: 0.65em;
     width: 6%;
     margin-right: 20px;
 }
@@ -486,6 +511,7 @@ section.education {
     clear: both;
 }
 
+/*  */
 .education .timeline .bullet {
     color: #328070;
 }
@@ -514,9 +540,6 @@ section.hobby {
 
 }
 
-.hobbies-list img * {
-    fill: #fff;
-}
 
 .hobby .hobbies-list h4 {
     text-transform: uppercase;
@@ -541,12 +564,88 @@ section.contact {
     background-color: #846add;
 }
 
+.contact-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-field {
+    margin-bottom: 10px;
+
+}
+
+.form-field label {
+    font-size: 0.65em;
+    font-weight: 100;
+    display: inline-block;
+}
+
+.form-field input,
+.form-field textarea {
+    outline: none;
+    color: #eee;
+    width: 70%;
+    float: right;
+    margin-left: 10px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #7c64d0;
+    -webkit-box-shadow: inset 1px 2px 2px rgba(102, 64, 235, .17);
+    -moz-box-shadow: inset 1px 2px 2px rgba(102, 64, 235, .17);
+    box-shadow: inset 1px 2px 2px rgba(102, 64, 235, .17);
+    border: 0;
+}
+
+.form-field input {
+    height: 0.9em;
+}
+
+.form-field textarea {
+    /* width: 69%; */
+    /* padding: 1px; */
+    resize: none;
+}
+
+
+.form-field span {
+    vertical-align: top
+}
+
+.contact-form button[type=submit] {
+    border: none;
+    font-size: 0.65em;
+    font-weight: 100;
+    padding: 3px 8px;
+    border-radius: 2px;
+    background-color: #324d5c;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-form button[type=submit]:hover {
+    background-color: rgba(102, 64, 235, .5)
+}
+
+
+
 
 
 
 footer {
     text-align: center;
-    font-size: 0.4em;
+    font-size: 0.5em;
     font-weight: 100;
     padding: 5px;
 }
+
+
+
+
+
+
+
+
+/****************************************************************************************/
+/* RESPONSIVE TABLET */
