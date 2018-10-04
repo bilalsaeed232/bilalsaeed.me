@@ -231,6 +231,7 @@ a:hover {
 }
 
 
+
 .container {
     width: 90%;
     max-width: 520px;
@@ -318,6 +319,10 @@ header .icon.call {
 }
 
 
+.number {
+    display: none;
+}
+
 
 
 
@@ -325,8 +330,17 @@ header .icon.call {
 
 .intro .profile-photo {
     height: 130px;
-    ;
 }
+
+
+/* .intro .content .web-designer::after {
+    content: '';
+    display: inline-block;
+    background: url('../assets/images/leaf.png');
+    background-size: contain;
+    width: 36px;
+    height: 17px;
+} */
 
 .intro .profile-photo a {
     display: block;
@@ -367,6 +381,9 @@ header .icon.call {
 
 .intro .web-designer {
     right: 18px;
+    padding-right: 15px;
+    background: url(../assets/images/leaf.png) no-repeat right bottom;
+    background-size: 18px 9px;
 }
 
 
@@ -447,6 +464,7 @@ section.experience {
 .timeline h4 {
     width: 70%;
     font-size: 0.65em;
+    padding-bottom: 0px;
 }
 
 .timeline h4::after {
@@ -455,6 +473,7 @@ section.experience {
     height: 5px;
     width: 100%;
     color: #fff;
+    margin-top: -5px;
 }
 
 .timeline>div:last-child h4::after {
@@ -535,6 +554,13 @@ section.hobby {
     text-align: center;
 }
 
+
+
+.hobby .hobbies-list li h4 {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
 .hobby .hobbies-list img {
     width: 100%;
 
@@ -542,6 +568,7 @@ section.hobby {
 
 
 .hobby .hobbies-list h4 {
+    /* margin-top: -30px; */
     text-transform: uppercase;
     color: #998237;
     font-weight: bold;
@@ -578,17 +605,20 @@ section.contact {
     font-size: 0.65em;
     font-weight: 100;
     display: inline-block;
+    width: 100%;
 }
 
 .form-field input,
 .form-field textarea {
     outline: none;
     color: #eee;
-    width: 70%;
+    width: 100%;
     float: right;
     margin-left: 10px;
+    margin-top: 5px;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto',
+        sans-serif;
     background-color: #7c64d0;
     -webkit-box-shadow: inset 1px 2px 2px rgba(102, 64, 235, .17);
     -moz-box-shadow: inset 1px 2px 2px rgba(102, 64, 235, .17);
@@ -648,4 +678,110 @@ footer {
 
 
 /****************************************************************************************/
-/* RESPONSIVE TABLET */
+/******************************* RESPONSIVE TABLET **************************************/
+
+
+
+@media screen and (min-width: 620px) {
+
+    /* GLOBAL STYLES */
+    .content {
+        padding: 20px 70px 30px;
+    }
+
+    .meter {
+        height: 17px;
+        border-radius: 10px;
+    }
+
+    .number {
+        display: inline-block;
+        font-size: 0.6em;
+        color: #555;
+        padding-left: 5px;
+    }
+
+    .icon {
+        font-size: 0.9em;
+    }
+
+
+
+
+
+    /* INTRO SECTION */
+    .intro .profile-photo {
+        height: unset;
+    }
+
+    .intro .profile-photo a {
+        margin-top: 0px;
+        width: 130px;
+        height: 120px;
+    }
+
+    .intro .web-developer,
+    .intro .web-designer {
+        top: 90px;
+        font-size: 1.2em;
+        font-weight: 100;
+    }
+
+    .intro .web-developer {
+        left: 60px;
+    }
+
+    .intro .web-designer {
+        right: 60px;
+        padding-right: 2px;
+        background-size: 28px 14px;
+    }
+
+
+
+
+
+    /* SKILL SECTION */
+    .skill .services h4,
+    .skill .technologies h4 {
+        position: absolute;
+        z-index: 1;
+        padding-left: 10px;
+        padding-top: 3px;
+        opacity: 0.85;
+    }
+
+    .skill .icon {
+        top: 0;
+    }
+
+    /* HOBBIES SECTION */
+    .hobby .hobbies-list li {
+        display: inline-block;
+        width: 32%;
+    }
+
+    .hobby .hobbies-list li h4 {
+        margin-top: -8px;
+        margin-bottom: 0;
+    }
+
+
+
+
+
+    /* CONTACT SECTION */
+    .form-field input,
+    .form-field textarea {
+        margin-top: 0;
+        width: 80%;
+    }
+
+    .contact-form button[type=submit] {
+        padding: 6px 9px;
+    }
+
+    .contact .content {
+        padding-bottom: 50px;
+    }
+}
