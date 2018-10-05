@@ -273,19 +273,21 @@ section::after {
     position: relative;
 }
 
-.meter::before {
+.meter .bar {
     content: '';
     position: absolute;
     left: 0;
     display: block;
-    width: 70%;
+    width: 0%;
     height: inherit;
     border-radius: inherit;
     background-color: #99532b;
-    transition: width 2.5s ease-in-out;
-    transition-delay: 1s;
-
+    transition: width 1.3s ease-out;
+    transition-delay: 0.6s;
+    max-width: 100%;
 }
+
+
 
 
 
@@ -332,6 +334,7 @@ header .icon.print {
 header .icon.print span {
     font-size: 0.65em;
     padding-left: 5px;
+    display: none;
 }
 
 
@@ -424,6 +427,14 @@ section.skill {
     /* background-image: inherit; */
 }
 
+section .desc {
+    font-size: 0.6em;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 3em;
+    display: none;
+}
+
 .skill .services h2,
 .skill .technologies h2 {
     margin-left: 24px;
@@ -441,6 +452,7 @@ section.skill {
 .skill .technologies-list .title {
     font-size: 0.65em;
 }
+
 
 .skill .services-list {
     margin-bottom: 2em;
@@ -776,6 +788,11 @@ footer {
 @media screen and (min-width: 620px) {
 
     /* GLOBAL STYLES */
+
+    h1 {
+        margin-bottom: 0.6em;
+    }
+
     .content {
         padding: 20px 70px 30px;
     }
@@ -794,6 +811,14 @@ footer {
 
     .icon {
         font-size: 0.9em;
+    }
+
+    header .icon.print span {
+        display: inline-block;
+    }
+
+    section .desc {
+        display: block;
     }
 
 
