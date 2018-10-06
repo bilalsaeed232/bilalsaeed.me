@@ -27,6 +27,10 @@ section.contact {
     display: none;
 }
 
+.content {
+    margin-bottom: 10px;
+}
+
 
 .print-content {
     display: block;
@@ -38,10 +42,19 @@ section.contact {
     clear: both;
 }
 
+.print-content h4::before,
+section h1::before {
+    content: url(../assets/images/heading_bg_print.gif);
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
 .print-content h4,
 section h1 {
-    background-color: #eee;
+    /* background-color: #eee; */
     padding: 3px 1px;
+    position: relative;
 }
 
 .icon {
@@ -138,11 +151,11 @@ main.intro .tagline {
 }
 
 main.intro .profile-photo a {
-    background: url('../assets/images/bilal_print.jpg') contain;
+    content: url('../assets/images/bilal_print.jpg');
     display: block;
-    background: url(../assets/images/bilal_print.jpg) no-repeat;
-    background-size: contain;
-    width: 228px;
+    /* background: url(../assets/images/bilal_print.jpg) no-repeat; */
+    /* background-size: contain; */
+    width: 156px;
     height: 103px;
     border: 3px solid white;
     transition: border-color,
@@ -151,7 +164,7 @@ main.intro .profile-photo a {
 
 main.intro h1 {
     float: left;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 
@@ -160,6 +173,7 @@ main.intro h1+a::after {
     font-size: 8pt;
     display: block;
     clear: both;
+    padding-top: 5px;
     font-family: "Open Sans",
         sans-serif;
 }
@@ -181,7 +195,7 @@ main.intro .print-content hr {
 
 
 .intro .personal-info {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .intro .personal-info .details {
@@ -312,17 +326,23 @@ section.education {
 
 /* SECTION HOBBIES */
 section.hobby {
-    min-height: 300px;
+    min-height: 250px;
+}
+
+.hobby .hobbies-list::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .hobby .hobbies-list {
     margin-top: 30px;
-    margin-left: 40px;
+    margin-left: 20%;
 }
 
 .hobby .hobbies-list li {
     float: left;
-    margin-right: 80px;
+    margin-right: 135px;
     width: 116px;
 }
 
@@ -334,16 +354,26 @@ section.hobby .hobbies-list img {
 .hobbies-list li h4 {
     /* padding-top: 120px; */
     text-align: center;
+    width: 214px;
+    color: #aaa;
 }
 
 .hobbies-list li h4::before {
-    content: "";
     display: block;
-    background: url(../assets/icons/hobby_socializing_print.gif) center 0 no-repeat;
-    background-size: contain;
-    margin-bottom: 20px;
-    width: 116px;
-    height: 69px;
+    width: 214px;
+    height: 128px;
+}
+
+.hobbies-list li:nth-child(1) h4::before {
+    content: url(../assets/icons/hobby_videogames_print.gif);
+}
+
+.hobbies-list li:nth-child(2) h4::before {
+    content: url(../assets/icons/hobby_sports_print.gif);
+}
+
+.hobbies-list li:nth-child(3) h4::before {
+    content: url(../assets/icons/hobby_socializing_print.gif);
 }
 
 
