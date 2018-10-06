@@ -69,6 +69,10 @@ a:hover {
 
 /* GLOBAL STYLES */
 
+.print-content {
+    display: none;
+}
+
 .icon {
     font-size: 0.8em;
 }
