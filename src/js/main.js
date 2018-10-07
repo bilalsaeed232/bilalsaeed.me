@@ -82,3 +82,18 @@ function animateTechnologies() {
         ele.style.width = service.value;
     });
 }
+
+
+
+
+
+// to make a document object for printing and call print function
+let firstPrint = true; //solution for the printpreview css racing issue
+function printCV() {
+    if (firstPrint) {
+        window.print();
+        firstPrint = false;
+    }
+    setTimeout('window.print()', 500);
+
+}
