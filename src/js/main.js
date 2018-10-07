@@ -85,6 +85,18 @@ function animateTechnologies() {
 
 
 
+let oldTitle = "";
+// change page title back after print
+window.onbeforeprint = () => {
+    oldTitle = document.title;
+    document.title = "Bilal-CV";
+    console.info("Before", document.title);
+}
+
+window.onafterprint = () => {
+    document.title = oldTitle;
+    console.info("AFTER ", document.title);
+}
 
 
 // to make a document object for printing and call print function
